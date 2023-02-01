@@ -6,7 +6,7 @@
   "scripts": {
     "seed:dev": "nodemon ./db/seed.js",
     "seed": "node ./db/seed.js",
-    "start:dev": "nodemon server.js & npm run build:dev",
+    "start:dev": "nodemon server.js",
     "start": "node server.js",
     "start:react": "react-scripts start",
     "build": "webpack",

@@ -8,7 +8,7 @@ const CORS = require('cors');
 const path = require('path');
 const { rebuildDB } = require('./db/seedData');
 
-const buildPath = path.join(__dirname, 'dist');
+const buildPath = path.join(__dirname, 'dist/main.js');
 
 server.use('/dist', express.static(buildPath));
 
