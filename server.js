@@ -18,13 +18,6 @@ server.use(morgan('dev'));
 
 server.use(CORS());
 
-//   // Express serve up index.html file if it doesn't recognize route
-//   const path = require('path');
-//   server.get('*', (req, res) => {
-//     res.sendFile(path.resolve(__dirname, 'build', 'index.html'));
-//   });
-// }
-
 server.use((req, res, next) => {
   console.log('Starting body logger...');
   console.log(req.body);
@@ -36,10 +29,6 @@ server.get('/', (req, res) =>
   res.sendFile(path.join(__dirname, './public/index.html'))
 );
 
-// server.get('/*', (req, res) =>
-//   res.sendFile(path.join(__dirname, 'dist', 'main.js'))
-// );
-
 server.use('/api', apiRouter);
 
 server.use((error, req, res, next) => {
@@ -49,20 +38,12 @@ server.use((error, req, res, next) => {
   });
 });
 
-// server.get('/*', (req, res) => {
-//   res.status(404);
-//   res.send({
-//     name: 'PageNotFoundError',
-//     message: 'Page not found!',
-//   });
-// });
-
 const init = async () => {
   await client.connect();
 
   await rebuildDB();
 
-  const PORT = process.env['PORT'] ?? 4000;
+  const PORT = process.env['PORT'] ?? 3000;
 
   server.listen(PORT, () => {
     console.log(`Server is listening on ${PORT}`);

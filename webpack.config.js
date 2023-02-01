@@ -1,8 +1,8 @@
 'use strict';
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
+  mode: 'development',
   devtool: 'source-map',
   module: {
     rules: [
@@ -29,11 +29,5 @@ module.exports = {
   },
   devServer: {
     historyAPIFallback: true,
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'public/index.html'),
-      filename: 'index.html',
-    }),
-  ],
+  }
 };
