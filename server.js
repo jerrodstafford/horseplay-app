@@ -5,12 +5,12 @@ const client = require('./db/client');
 const morgan = require('morgan');
 const apiRouter = require('./api');
 const CORS = require('cors');
-const path = require('path');
+// const path = require('path');
 const { rebuildDB } = require('./db/seedData');
 
-const buildPath = path.join(__dirname, 'dist/main.js');
+// const buildPath = path.join(__dirname, 'dist/main.js');
 
-server.use('/dist', express.static(buildPath));
+// server.use('/dist', express.static(buildPath));
 
 server.use(express.json());
 
@@ -43,7 +43,7 @@ const init = async () => {
 
   await rebuildDB();
 
-  const PORT = process.env['PORT'] ?? 3000;
+  const PORT = process.env['PORT'] ?? 4000;
 
   server.listen(PORT, () => {
     console.log(`Server is listening on ${PORT}`);
