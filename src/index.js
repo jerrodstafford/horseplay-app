@@ -1,7 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import { createRoot } from 'react-dom/client';
-import { Route, Routes, HashRouter } from 'react-router-dom';
+import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import {
   Header,
   Footer,
@@ -103,7 +103,7 @@ const App = () => {
 const container = document.getElementById('app');
 const root = createRoot(container);
 root.render(
-  <HashRouter>
+  <BrowserRouter>
     <App />
-  </HashRouter>
+  </BrowserRouter>
 );

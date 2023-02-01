@@ -1,9 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const server = express();
-const client = require('./db/client');
 const morgan = require('morgan');
-const apiRouter = require('./api');
 const CORS = require('cors');
 // const path = require('path');
 const { rebuildDB } = require('./db/seedData');
@@ -25,10 +23,11 @@ server.use((req, res, next) => {
   next();
 });
 
-server.get('/', (req, res) =>
-  res.sendFile(path.join(__dirname, './public/index.html'))
-);
+// server.get('/', (req, res) =>
+//   res.sendFile(path.join(__dirname, './public/index.html'))
+// );
 
+const apiRouter = require('./api');
 server.use('/api', apiRouter);
 
 server.use((error, req, res, next) => {
@@ -38,6 +37,7 @@ server.use((error, req, res, next) => {
   });
 });
 
+const client = require('./db/client');
 const init = async () => {
   
   try {
@@ -47,7 +47,7 @@ const init = async () => {
     console.log(error);
   }
 
-  const PORT = process.env['PORT'] ?? 3000;
+  const PORT = process.env['PORT'] ?? 4000;
 
   server.listen(PORT, () => {
     console.log(`Server is listening on ${PORT}`);
