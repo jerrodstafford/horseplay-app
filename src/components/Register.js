@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import { BASE } from '../api/index';
 import { storeCurrentUser } from '../auth';
 import './Register.css';
+
 
 export const Register = props => {
   const [createUsername, setCreateUsername] = useState('');
@@ -12,6 +12,7 @@ export const Register = props => {
   const [createFirstName, setCreateFirstName] = useState('');
   const [createLastName, setCreateLastName] = useState('');
   const [createEmail, setCreateEmail] = useState('');
+  const BASE = '/api';
 
   let navigate = useNavigate();
 

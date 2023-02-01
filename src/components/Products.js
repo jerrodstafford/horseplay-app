@@ -1,8 +1,9 @@
 import axios from 'axios';
-import { BASE } from '../api/index';
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './Products.css';
+
+const BASE = '/api';
 
 export const Products = props => {
   const [products, setProducts] = useState([]);

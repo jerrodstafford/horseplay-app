@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { BASE } from '../api/index';
 import './Admin.css';
 
 export const Admin = () => {
   const [users, setUsers] = useState([]);
   const token = localStorage.getItem('token');
+  const BASE = '/api';
 
   useEffect(() => {
     const getUsers = async token => {

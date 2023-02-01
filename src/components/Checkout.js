@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-const { BASE } = require('../api/index');
 import './Checkout.css';
 
 export const Checkout = () => {
@@ -11,6 +10,8 @@ export const Checkout = () => {
   const [CVC, setCVC] = useState('');
   const [orderId, setOrderId] = useState('');
   const userId = localStorage.getItem('userId');
+  const BASE = '/api';
+
 
   useEffect(() => {
     const getOrderId = async () => {

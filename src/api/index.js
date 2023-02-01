@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const BASE = '/api'
+const BASE = '/api';
 
 export const userCheck = async token => {
   const response = await fetch(`${BASE}/users/me`, {

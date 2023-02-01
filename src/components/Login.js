@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import { BASE } from '../api/index';
 import { storeCurrentUser } from '../auth';
 import './Login.css';
+
 
 export const Login = props => {
   const [usernameLogin, setUsernameLogin] = useState('');
   const [passwordLogin, setPasswordLogin] = useState('');
+  const BASE = '/api';
 
   let navigate = useNavigate();
 

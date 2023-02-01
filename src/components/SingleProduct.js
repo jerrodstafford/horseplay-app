@@ -1,8 +1,8 @@
-import { BASE } from '../api/index';
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './SingleProduct.css';
+
 
 export const SingleProduct = props => {
   const [product, setProduct] = useState([]);
@@ -10,6 +10,7 @@ export const SingleProduct = props => {
   const userId = localStorage.getItem('userId');
   const guestId = localStorage.getItem('guestId');
   const singleProductId = localStorage.getItem('singleProductId');
+  const BASE = '/api';
   const navigate = useNavigate();
 
   useEffect(() => {
