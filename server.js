@@ -39,11 +39,15 @@ server.use((error, req, res, next) => {
 });
 
 const init = async () => {
-  await client.connect();
+  
+  try {
+    await client.connect();
+    await rebuildDB();
+  } catch (error) {
+    console.log(error);
+  }
 
-  await rebuildDB();
-
-  const PORT = process.env['PORT'] ?? 4000;
+  const PORT = process.env['PORT'] ?? 3000;
 
   server.listen(PORT, () => {
     console.log(`Server is listening on ${PORT}`);

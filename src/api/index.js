@@ -1,15 +1,6 @@
 import axios from 'axios';
 
-// export const BASE = process.env.BASE
-//   ? `${process.env.BASE}:${process.env.PORT}/api`
-//   : 'http://localhost:4000/api';
-
-export const BASE = '/api';
-//   process.env.NODE_ENV === 'production'
-//     ? `https://horseplay.herokuapp.com:443/api`
-//     : 'http://localhost:4000/api';
-
-// console.log('BASE>>>>>>>>>>>>>>>>>>>', BASE);
+export const BASE = 'http://localhost:3000/api';
 
 export const userCheck = async token => {
   const response = await fetch(`${BASE}/users/me`, {

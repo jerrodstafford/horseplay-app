@@ -1,4 +1,5 @@
 export function storeCurrentUser(data) {
+  console.log(data)
   localStorage.setItem('token', data.data.token)
   localStorage.setItem('userId', data.data.user.id)
   localStorage.setItem('username', data.data.user.username)
