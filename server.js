@@ -1,5 +1,6 @@
 require('dotenv').config();
 const express = require('express');
+const bodyParser = require("body-parser");
 const server = express();
 const morgan = require('morgan');
 const CORS = require('cors');
@@ -9,6 +10,7 @@ const { rebuildDB } = require('./db/seedData');
 // const buildPath = path.join(__dirname, 'dist/main.js');
 
 // server.use('/dist', express.static(buildPath));
+server.use(bodyParser.json());
 
 server.use(express.json());
 
