@@ -18,7 +18,6 @@ import {
 } from './components';
 import { getCurrentUser } from '../src/auth';
 import { userCheck } from './api';
-import './style.css';
 const { BASE } = require('./api/index');
 
 const App = () => {
