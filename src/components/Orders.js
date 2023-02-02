@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 const { axios } = require('axios');
-const { BASE } = require('../api/index');
 import './Orders.css';
 
 export const Orders = () => {
@@ -12,7 +11,8 @@ export const Orders = () => {
   const userId = localStorage.getItem('userId');
   const shippingAndHandling = 10;
   const tax = subtotal * 0.1;
-
+  const BASE = 'http://localhost:3000/api'
+  
   useEffect(() => {
     const fetchOrder = async () => {
       const results = await openOrder();

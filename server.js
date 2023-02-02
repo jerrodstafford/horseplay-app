@@ -5,16 +5,18 @@ const server = express();
 const morgan = require('morgan');
 const CORS = require('cors');
 // const path = require('path');
+// const chalk = require("chalk")
 const { rebuildDB } = require('./db/seedData');
 
 // const buildPath = path.join(__dirname, 'dist/main.js');
 
 // server.use('/dist', express.static(buildPath));
+server.use(morgan('dev'));
+
 server.use(bodyParser.json());
 
 server.use(express.json());
 
-server.use(morgan('dev'));
 
 server.use(CORS());
 
@@ -50,10 +52,10 @@ const init = async () => {
   }
 
   const PORT = process.env['PORT'] ?? 3000;
-
+  
   server.listen(PORT, () => {
-    console.log(`Server is listening on ${PORT}`);
-  });
-};
-
-init();
+    console.log(`Server is listening on ${PORT}`,
+      )});
+  };
+  
+  init();

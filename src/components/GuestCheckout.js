@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-const { BASE } = require('../api/index');
 import './Checkout.css';
 
 export const GuestCheckout = () => {
@@ -11,7 +10,9 @@ export const GuestCheckout = () => {
   const [CVC, setCVC] = useState('');
   const [orderId, setOrderId] = useState('');
   const guestId = localStorage.getItem('guestId');
+  const BASE = 'http://localhost:3000/api'
 
+  
   useEffect(() => {
     const getOrderId = async () => {
       const results = await openOrder();

@@ -9,7 +9,7 @@ export const Products = props => {
   const { setProductId } = props;
   const navigate = useNavigate();
   const singleProductId = localStorage.getItem('singleProductId');
-  const BASE = '/api';
+  const BASE = 'http://localhost:3000/api'
   
   useEffect(() => {
     const getProducts = async () => {

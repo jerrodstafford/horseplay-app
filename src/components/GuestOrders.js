@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 const { axios } = require('axios');
-const { BASE } = require('../api/index');
 import './Orders.css';
 
 export const GuestOrders = () => {
@@ -11,6 +10,7 @@ export const GuestOrders = () => {
   const guestId = localStorage.getItem('guestId');
   const shippingAndHandling = 10;
   const tax = subtotal * 0.1;
+  const BASE = 'http://localhost:3000/api'
   const navigate = useNavigate();
 
   useEffect(() => {
