@@ -8,7 +8,7 @@ import './Login.css';
 export const Login = props => {
   const [usernameLogin, setUsernameLogin] = useState('');
   const [passwordLogin, setPasswordLogin] = useState('');
-  const BASE = 'http://localhost:4000/api'
+  const BASE = process.env.API_URL || 'http://localhost:4000/api'
 
   let navigate = useNavigate();
 

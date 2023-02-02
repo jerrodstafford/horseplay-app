@@ -10,7 +10,8 @@ export const Checkout = () => {
   const [CVC, setCVC] = useState('');
   const [orderId, setOrderId] = useState('');
   const userId = localStorage.getItem('userId');
-  const BASE = 'http://localhost:4000/api'
+  const BASE = process.env.API_URL || 'http://localhost:4000/api'
+
 
 
   useEffect(() => {

@@ -11,7 +11,7 @@ export const Orders = () => {
   const userId = localStorage.getItem('userId');
   const shippingAndHandling = 10;
   const tax = subtotal * 0.1;
-  const BASE = 'http://localhost:4000/api'
+  const BASE = process.env.API_URL || 'http://localhost:4000/api'
   
   useEffect(() => {
     const fetchOrder = async () => {

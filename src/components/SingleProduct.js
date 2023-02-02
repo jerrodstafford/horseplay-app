@@ -10,7 +10,7 @@ export const SingleProduct = props => {
   const userId = localStorage.getItem('userId');
   const guestId = localStorage.getItem('guestId');
   const singleProductId = localStorage.getItem('singleProductId');
-  const BASE = 'http://localhost:4000/api'
+  const BASE = process.env.API_URL || 'http://localhost:4000/api'
   const navigate = useNavigate();
 
   useEffect(() => {

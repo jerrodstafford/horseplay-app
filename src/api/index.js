@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const BASE = 'http://localhost:4000/api'
+const BASE = process.env.API_URL || 'http://localhost:4000/api'
+
 
 export const userCheck = async token => {
   const response = await fetch(`${BASE}/users/me`, {
