@@ -12,7 +12,7 @@ export const Register = props => {
   const [createFirstName, setCreateFirstName] = useState('');
   const [createLastName, setCreateLastName] = useState('');
   const [createEmail, setCreateEmail] = useState('');
-  const BASE = process.env.API_URL || 'http://localhost:4000/api'
+  const BASE = 'https://horseplay-api-3d2q.onrender.com/api'
 
   let navigate = useNavigate();
 

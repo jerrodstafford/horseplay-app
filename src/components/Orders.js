@@ -11,7 +11,7 @@ export const Orders = () => {
   const userId = localStorage.getItem('userId');
   const shippingAndHandling = 10;
   const tax = subtotal * 0.1;
-  const BASE = process.env.API_URL || 'http://localhost:4000/api'
+  const BASE = 'https://horseplay-api-3d2q.onrender.com/api'
   
   useEffect(() => {
     const fetchOrder = async () => {

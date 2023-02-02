@@ -10,7 +10,7 @@ export const GuestCheckout = () => {
   const [CVC, setCVC] = useState('');
   const [orderId, setOrderId] = useState('');
   const guestId = localStorage.getItem('guestId');
-  const BASE = process.env.API_URL || 'http://localhost:4000/api'
+  const BASE = 'https://horseplay-api-3d2q.onrender.com/api'
 
   
   useEffect(() => {
