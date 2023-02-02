@@ -10,7 +10,7 @@
     "start": "node server.js",
     "start:react": "react-scripts start",
     "serve": "webpack serve --mode development",
-    "build": "webpack",
+    "build": "react-scripts build",
     "build:dev": "npm run build -- --watch --mode=development"
   },
   "keywords": [],
