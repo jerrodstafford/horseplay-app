@@ -18,6 +18,7 @@ import {
 } from './components';
 import { getCurrentUser } from '../src/auth';
 import { userCheck } from './api';
+import './style.css';
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(getCurrentUser);
@@ -26,7 +27,7 @@ const App = () => {
 
   const currentToken = localStorage.getItem('token');
   const guestId = localStorage.getItem('guestId');
-  const BASE = 'http://localhost:3000/api'
+  const BASE = 'http://localhost:4000/api'
 
   const checkForGuests = async () => {
     const response = await fetch(`${BASE}/guestusers`, {

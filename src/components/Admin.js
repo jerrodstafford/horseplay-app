@@ -4,7 +4,7 @@ import './Admin.css';
 export const Admin = () => {
   const [users, setUsers] = useState([]);
   const token = localStorage.getItem('token');
-  const BASE = 'http://localhost:3000/api'
+  const BASE = 'http://localhost:4000/api'
 
   useEffect(() => {
     const getUsers = async token => {
