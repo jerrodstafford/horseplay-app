@@ -3,14 +3,14 @@ import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './Products.css';
 
-const BASE = '/api';
 
 export const Products = props => {
   const [products, setProducts] = useState([]);
   const { setProductId } = props;
   const navigate = useNavigate();
   const singleProductId = localStorage.getItem('singleProductId');
-
+  const BASE = '/api';
+  
   useEffect(() => {
     const getProducts = async () => {
       try {
