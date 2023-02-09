@@ -59,7 +59,7 @@ export const Register = props => {
             <label>Create Password</label>
             <input
               className="input-bar"
-              type="text"
+              type="password"
               placeholder="Create Password"
               value={createPassword}
               onChange={event => {
